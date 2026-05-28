@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>
+Prediction Result
+</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="main-container">
+
+<div class="form-container">
+
+<h1>
+Prediction Result
+</h1>
+
+{% if prediction_text == "Student is at Risk of Dropping Out" %}
+
+<h2 class="risk">
+⚠ Student is at Risk of Dropping Out
+</h2>
+
+{% else %}
+
+<h2 class="safe">
+✅ Student is Academically Safe
+</h2>
+
+{% endif %}
+
+<br>
+
+<a href="/predictpage">
+
+<button>
+Predict Again
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
