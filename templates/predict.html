@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Student Dropout Prediction System
+</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <!-- Header Section -->
+
+    <div class="header">
+
+        <h1>
+            🎓 Student Dropout Prediction System
+        </h1>
+
+        <p class="subtitle">
+            Predict students who are at risk of dropping out
+            based on academic performance, attendance patterns,
+            and demographic data using Machine Learning.
+        </p>
+
+        <div class="badges">
+
+            <span>
+                🤖 ML Powered
+            </span>
+
+            <span>
+                📊 Tabular ML
+            </span>
+
+            <span>
+                🎯 High Accuracy
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- Form Section -->
+
+    <div class="form-container">
+
+        <h2>
+            Get Student Dropout Risk Prediction
+        </h2>
+
+        <form action="/predict" method="post">
+
+            <div class="grid">
+
+                <!-- Academic Details -->
+
+                <div class="card">
+
+                    <h3>
+                        📚 Academic Details
+                    </h3>
+
+                    <input type="number"
+                    name="G1"
+                    placeholder="G1 Marks (0-20)"
+                    required>
+
+                    <input type="number"
+                    name="G2"
+                    placeholder="G2 Marks (0-20)"
+                    required>
+
+                    <input type="number"
+                    name="studytime"
+                    placeholder="Study Time (1-4)"
+                    required>
+
+                    <input type="number"
+                    name="failures"
+                    placeholder="Past Class Failures"
+                    required>
+
+                </div>
+
+                <!-- Attendance Information -->
+
+                <div class="card">
+
+                    <h3>
+                        📅 Attendance Information
+                    </h3>
+
+                    <input type="number"
+                    name="absences"
+                    placeholder="Number of Absences"
+                    required>
+
+                    <input type="number"
+                    name="age"
+                    placeholder="Age"
+                    required>
+
+                </div>
+
+                <!-- Demographic Information -->
+
+                <div class="card">
+
+                    <h3>
+                        👨‍👩‍👧 Demographic Information
+                    </h3>
+
+                    <select name="sex" required>
+
+                        <option disabled selected>
+                            Select Gender
+                        </option>
+
+                        <option value="0">
+                            Male
+                        </option>
+
+                        <option value="1">
+                            Female
+                        </option>
+
+                    </select>
+
+                    <select name="internet" required>
+
+                        <option disabled selected>
+                            Internet Access
+                        </option>
+
+                        <option value="1">
+                            Yes
+                        </option>
+
+                        <option value="0">
+                            No
+                        </option>
+
+                    </select>
+
+                    <select name="schoolsup" required>
+
+                        <option disabled selected>
+                            School Educational Support
+                        </option>
+
+                        <option value="1">
+                            Yes
+                        </option>
+
+                        <option value="0">
+                            No
+                        </option>
+
+                    </select>
+
+                    <select name="famsup" required>
+
+                        <option disabled selected>
+                            Family Educational Support
+                        </option>
+
+                        <option value="1">
+                            Yes
+                        </option>
+
+                        <option value="0">
+                            No
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <button type="submit">
+                Predict Dropout Risk
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
